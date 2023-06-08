@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <Box
         w="fit"
         h="calc(100vh)"
-        bgImage={"url(/bg.svg)"}
+        // bgImage={"url(/bg.svg)"}
         // bgImage={"url(/home-background.svg)"}
         bgImage={connected ? "" : "url(/bg.svg)"}
         backgroundPosition="center"
