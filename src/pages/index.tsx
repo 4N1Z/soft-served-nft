@@ -4,7 +4,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "./components/NavBar";
 import Disconnected from "./components/Disconnected";
-
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react"
 import Connected from "./components/Connected";
 
@@ -16,12 +16,12 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Soft Served NFT</title>
-        <meta name="The NFT Collection for Buildoors" />
+        <meta name="The NFT Collection of SSN" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Box
-        w="fit"
+        w="full"
         h="calc(100vh)"
         // bgImage={"url(/bg.svg)"}
         // bgImage={"url(/home-background.svg)"}
@@ -29,13 +29,18 @@ const Home: NextPage = () => {
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
-          {/* NavBar */}
           <NavBar/>
 
           <Spacer />
             {/* If connected, the second view, otherwise the first */}
             {/* <Disconnected /> */}
-             <Center>{connected ? <Connected /> : <Disconnected />}</Center>
+              {/* Your component hierarchy */}
+              <Center>
+                {/* <WalletModalProvider> */}
+                {/* <Connected/> */}
+                 {connected ? <Connected /> : <Disconnected />}
+                 {/* </WalletModalProvider> */}
+              </Center>
           <Spacer />
 
           <Center>

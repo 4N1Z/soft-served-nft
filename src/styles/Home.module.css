@@ -3,5 +3,10 @@
     margin: 0;
   }
   .wallet-adapter-button-trigger {
-    background-color: #2F00FF;
+    background-color: #6900fc;
+    
+  }
+  .wallet-adapter-button-trigger:hover{
+    cursor: pointer;
+
   }

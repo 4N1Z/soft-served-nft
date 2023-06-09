@@ -40,7 +40,7 @@ const Connected: FC = () => {
         <Image src="avatar4.png" alt="" />
       </HStack>
 
-      <Button bgColor="accent" color="white" maxW="380px">
+      <Button bgColor="accent" color="black" maxW="380px">
         <HStack>
           <Text>mint SSN's</Text>
           <ArrowForwardIcon />
