@@ -22,7 +22,7 @@ const Connected: FC = () => {
             noOfLines={1}
             textAlign="center"
           >
-            Welcome Soft Servers.
+            Welcome Soft Servers
           </Heading>
 
           <Text color="bodyText" fontSize="xl" textAlign="center">
@@ -42,7 +42,7 @@ const Connected: FC = () => {
 
       <Button bgColor="accent" color="black" maxW="380px">
         <HStack>
-          <Text>mint SSN's</Text>
+          <Text>mint SSN&apos;s</Text>
           <ArrowForwardIcon />
         </HStack>
       </Button>

@@ -33,7 +33,7 @@ const Disconnected: FC = () => {
         connect().catch(() => {})
       }
     },
-    [wallet, connect, modalState]
+    [wallet, connect, modalState],
   )
 
   return (
@@ -47,7 +47,7 @@ const Disconnected: FC = () => {
           textAlign="center"
           className="main_title"
         >
-          Mint your Soft Served NFT's.
+          Mint your Soft Served NFT&apos;s.
         </Heading>
         <Button
           bgColor="accent"
