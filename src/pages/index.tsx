@@ -5,12 +5,11 @@ import styles from "../styles/Home.module.css";
 import NavBar from "./components/NavBar";
 import Disconnected from "./components/Disconnected";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
-import { useWallet } from "@solana/wallet-adapter-react"
+import { useWallet } from "@solana/wallet-adapter-react";
 import Connected from "./components/Connected";
 
-
 const Home: NextPage = () => {
-  const { connected } = useWallet()
+  const { connected } = useWallet();
 
   return (
     <div className={styles.container}>
@@ -25,22 +24,22 @@ const Home: NextPage = () => {
         h="calc(100vh)"
         // bgImage={"url(/bg.svg)"}
         // bgImage={"url(/home-background.svg)"}
+        // bgImage={connected ? "" : "url(/home-background.svg)"}
         bgImage={connected ? "" : "url(/bg.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
-          <NavBar/>
-
+          <NavBar />
           <Spacer />
-            {/* If connected, the second view, otherwise the first */}
-            {/* <Disconnected /> */}
-              {/* Your component hierarchy */}
-              <Center>
-                {/* <WalletModalProvider> */}
-                {/* <Connected/> */}
-                 {connected ? <Connected /> : <Disconnected />}
-                 {/* </WalletModalProvider> */}
-              </Center>
+          {/* If connected, the second view, otherwise the first */}
+          {/* Your component hierarchy */}
+          <Center>
+            <WalletModalProvider>
+              {/* <Connected/> */}
+              {/* <Disconnected /> */}
+              {/* {connected ? <Connected /> : <Disconnected />} */}
+            </WalletModalProvider>
+          </Center>
           <Spacer />
 
           <Center>
@@ -50,6 +49,7 @@ const Home: NextPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                {" "}
                 built with ❤️ by Aniz
               </a>
             </Box>

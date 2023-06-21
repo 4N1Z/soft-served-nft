@@ -14,6 +14,7 @@ import { Connection } from "@solana/web3.js";
 
 import { WalletProvider} from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import Connected from "./Connected";
 
 const Disconnected: FC = () => {
 
@@ -23,6 +24,8 @@ const Disconnected: FC = () => {
   
   const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
+      console.log("handleClick")
+
       if (event.defaultPrevented) {
         return
       }
@@ -30,7 +33,11 @@ const Disconnected: FC = () => {
       if (!wallet) {
         modalState.setVisible(true)
       } else {
-        connect().catch(() => {})
+        if (wallet) {
+          connect().catch(() => {})
+        } else {
+          modalState.setVisible(true)
+        }
       }
     },
     [wallet, connect, modalState],

@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import {extendTheme} from '@chakra-ui/react'
 import WalletContextProvider from './components/WalletContextProvider'
 
+
 const colors = {
     background: "F9F9F9",
     accent : "2F00FF",
