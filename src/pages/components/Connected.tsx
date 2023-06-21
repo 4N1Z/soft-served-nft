@@ -11,6 +11,9 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 
 const Connected: FC = () => {
+  const  handleMinting = () : void => {
+    alert("Minting");
+  }
   return (
     <VStack spacing={20}>
       <Container>
@@ -33,14 +36,14 @@ const Connected: FC = () => {
         </VStack>
       </Container>
 
-      <HStack spacing={10}>
+      <HStack spacing={1}>
         <Image src="avatar1.png" alt="" />
         <Image src="avatar2.png" alt="" />
         <Image src="avatar3.png" alt="" />
         <Image src="avatar4.png" alt="" />
       </HStack>
 
-      <Button bgColor="accent" color="black" maxW="380px">
+      <Button bgColor="accent" color="black" maxW="380px" onClick={handleMinting}>
         <HStack>
           <Text>mint SSN&apos;s</Text>
           <ArrowForwardIcon />

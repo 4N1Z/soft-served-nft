@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
       <Box
         w="full"
-        
+
         h="calc(100vh)"
         // bgImage={"url(/bg.svg)"}
         // bgImage={"url(/home-background.svg)"}
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             <WalletModalProvider>
               {/* <Connected/> */}
               {/* <Disconnected /> */}
-              {/* {connected ? <Connected /> : <Disconnected />} */}
+              {connected ? <Connected /> : <Disconnected />}
             </WalletModalProvider>
           </Center>
           <Spacer />
