@@ -20,13 +20,13 @@ const Home: NextPage = () => {
       </Head>
 
       <Box
-        w="full"
+        w="fill"
 
         h="calc(100vh)"
         // bgImage={"url(/bg.svg)"}
         // bgImage={"url(/home-background.svg)"}
         // bgImage={connected ? "" : "url(/home-background.svg)"}
-        bgImage={connected ? "" : "url(/bg.svg)"}
+        bgImage={connected ? "url(/bg2.svg)" : "url(/bg.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
@@ -36,15 +36,13 @@ const Home: NextPage = () => {
           {/* Your component hierarchy */}
           <Center>
             <WalletModalProvider>
-              {/* <Connected/> */}
-              {/* <Disconnected /> */}
               {connected ? <Connected /> : <Disconnected />}
             </WalletModalProvider>
           </Center>
           <Spacer />
 
           <Center>
-            <Box marginBottom={4} color="white">
+            <Box marginBottom={4} color="dark">
               <a
                 href="https://bento.me/aniz"
                 target="_blank"
