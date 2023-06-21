@@ -21,6 +21,7 @@ const Home: NextPage = () => {
 
       <Box
         w="full"
+        
         h="calc(100vh)"
         // bgImage={"url(/bg.svg)"}
         // bgImage={"url(/home-background.svg)"}
